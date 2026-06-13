@@ -73,19 +73,3 @@ A complete **PostgreSQL** database schema for a full-featured **Online Shopping 
 
 ```sql
 CREATE DATABASE online_shopping_db;
-### 2. Import Schema
-Bashpsql -U your_username -d online_shopping_db -f online_shopping_Database.sql
-### 3. Connect
-SQL\c online_shopping_db
-Example
--- Category
-INSERT INTO category (categoryname, description) 
-VALUES ('Electronics', 'Smartphones, laptops & accessories');
-
--- Product
-INSERT INTO product (categoryid, productname, price, stockquantity, imageurl)
-VALUES (1, 'iPhone 15', 999.99, 50, 'https://example.com/iphone.jpg');
-
--- Customer
-INSERT INTO customer (name, email, password, phone, address)
-VALUES ('John Doe', 'john@example.com', 'hashed_password_here', '+1234567890', '123 Main Street');
